@@ -1,0 +1,25 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="20%" r="90%">
+      <stop stop-color="#0D3024"/><stop offset="1" stop-color="#071D16"/>
+    </radialGradient>
+    <linearGradient id="e" x1="4" y1="6" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C9F8E0"/><stop offset=".55" stop-color="#65D6A0"/><stop offset="1" stop-color="#2E9C6D"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" stroke="#65D6A0" stroke-opacity=".35" stroke-width="1.5"/>
+  <g transform="translate(8 8)">
+    <path d="M25 20 L45 3.5 L38.5 18.5 Z" fill="#65D6A0" fill-opacity=".6"/>
+    <path d="M25 20 L38.5 18.5 L31.5 25 Z" fill="#65D6A0" fill-opacity=".32"/>
+    <path d="M16 18 L22 12.5 L27 15.5 L25 20 Z" fill="#C9F8E0" fill-opacity=".9"/>
+    <path d="M16 18 L25 20 L19 25 Z" fill="#65D6A0" fill-opacity=".75"/>
+    <path d="M2.5 21.5 L16 18 L17 20.5 Z" fill="#C9F8E0"/>
+    <path d="M19 25 L25 20 L31.5 25 L24.5 32.5 Z" fill="#1E8A5E"/>
+    <path d="M24.5 32.5 L31.5 25 L34 30.5 Z" fill="#65D6A0" fill-opacity=".45"/>
+    <path d="M24.5 32.5 L34 30.5 L42.5 41.5 Z" fill="#176B4B"/>
+    <path d="M24.5 32.5 L42.5 41.5 L35 44.5 Z" fill="#65D6A0" fill-opacity=".3"/>
+    <path d="M2.5 21.5 L16 18 L22 12.5 L27 15.5 L25 20 L45 3.5 L38.5 18.5 L31.5 25 L34 30.5 L42.5 41.5 M24.5 32.5 L35 44.5 M24.5 32.5 L19 25 L16 18" stroke="url(#e)" stroke-width=".9" stroke-linejoin="round" stroke-linecap="round"/>
+    <g fill="#EFFFF6"><circle cx="2.5" cy="21.5" r="1.8"/><circle cx="45" cy="3.5" r="2"/><circle cx="42.5" cy="41.5" r="1.7"/></g>
+  </g>
+</svg>

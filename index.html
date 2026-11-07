@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Nodo Colibrí — Estudio de diseño y desarrollo web</title>
+  <meta name="description" content="Nodo Colibrí es un estudio digital que diseña y desarrolla sitios web premium, rápidos y a medida. Landing pages, sitios profesionales y tiendas en línea. Cotiza por WhatsApp." />
+  <meta name="theme-color" content="#071D16" />
+  <meta name="color-scheme" content="dark" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_LA" />
+  <meta property="og:site_name" content="Nodo Colibrí" />
+  <meta property="og:title" content="Nodo Colibrí — Diseño web con la precisión de un colibrí" />
+  <meta property="og:description" content="Sitios web premium, rápidos y memorables. Estrategia, diseño y desarrollo en un solo lugar." />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <script src="assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nodo Colibrí",
+    "description": "Estudio digital de diseño y desarrollo web: landing pages, sitios profesionales y tiendas en línea.",
+    "telephone": "+506 8779 7996",
+    "priceRange": "$$",
+    "serviceType": ["Diseño web", "Desarrollo web", "Tiendas en línea", "SEO", "Identidad visual"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- Sprite: logo + iconos -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="ncEdge" x1="4" y1="6" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#C9F8E0" /><stop offset=".55" stop-color="#65D6A0" /><stop offset="1" stop-color="#2E9C6D" />
+      </linearGradient>
+      <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="#C9F8E0" /><stop offset="1" stop-color="#65D6A0" />
+      </linearGradient>
+    </defs>
+    <symbol id="mark" viewBox="0 0 48 48">
+      <path d="M25 20 L45 3.5 L38.5 18.5 Z" fill="#65D6A0" fill-opacity=".6" />
+      <path d="M25 20 L38.5 18.5 L31.5 25 Z" fill="#65D6A0" fill-opacity=".32" />
+      <path d="M16 18 L22 12.5 L27 15.5 L25 20 Z" fill="#C9F8E0" fill-opacity=".9" />
+      <path d="M16 18 L25 20 L19 25 Z" fill="#65D6A0" fill-opacity=".75" />
+      <path d="M2.5 21.5 L16 18 L17 20.5 Z" fill="#C9F8E0" />
+      <path d="M19 25 L25 20 L31.5 25 L24.5 32.5 Z" fill="#1E8A5E" />
+      <path d="M24.5 32.5 L31.5 25 L34 30.5 Z" fill="#65D6A0" fill-opacity=".45" />
+      <path d="M24.5 32.5 L34 30.5 L42.5 41.5 Z" fill="#176B4B" />
+      <path d="M24.5 32.5 L42.5 41.5 L35 44.5 Z" fill="#65D6A0" fill-opacity=".3" />
+      <path d="M2.5 21.5 L16 18 L22 12.5 L27 15.5 L25 20 L45 3.5 L38.5 18.5 L31.5 25 L34 30.5 L42.5 41.5 M24.5 32.5 L35 44.5 M24.5 32.5 L19 25 L16 18" fill="none" stroke="url(#ncEdge)" stroke-width=".7" stroke-linejoin="round" stroke-linecap="round" />
+      <g fill="#EFFFF6"><circle cx="2.5" cy="21.5" r="1.5" /><circle cx="45" cy="3.5" r="1.7" /><circle cx="42.5" cy="41.5" r="1.4" /><circle cx="22" cy="12.5" r="1.1" /><circle cx="24.5" cy="32.5" r="1.1" /></g>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.11.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z" /></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7" /><path d="M8.5 7H17v8.5" /></g></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5.5 12.5 4 4L18.5 7.5" /></g></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></g></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3" /><path d="M3 9h18M9.5 9v11" /></g></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M13.5 5l-3 14" /></g></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 7.5h13l-1 12.5h-11z" /><path d="M9 7.5a3 3 0 0 1 6 0" /></g></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.7-1 1.2-1.9-.6-1.1-.1-2.4 1.4-2.4H17a4 4 0 0 0 4-4C21 7.2 17 3 12 3Z" /><circle cx="7.5" cy="11" r="1" /><circle cx="10.5" cy="7" r="1" /><circle cx="15" cy="7.5" r="1" /></g></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5" /><path d="m20 20-4.2-4.2" /></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v6c0 4.4-3 7.5-7 9-4-1.5-7-4.6-7-9V6z" /><path d="m9 12 2 2 4-4" /></g></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="11" width="13" height="9" rx="2.5" /><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3" /></g></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5c.5 4.6 2.9 7 7.5 7.5-4.6.5-7 2.9-7.5 7.5-.5-4.6-2.9-7-7.5-7.5 4.6-.5 7-2.9 7.5-7.5Z" /></symbol>
+  </svg>
+
+  <!-- Fondo ambiental fijo -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="light light--1"></div>
+    <div class="light light--2"></div>
+    <div class="light light--3"></div>
+    <div class="light light--4"></div>
+    <div class="backdrop__noise"></div>
+  </div>
+
+  <!-- Navegación -->
+  <header class="site-header" data-header>
+    <nav class="nav glass is-interactive" aria-label="Principal">
+      <a class="brand" href="#inicio" aria-label="Nodo Colibrí, ir al inicio">
+        <svg class="brand__mark" aria-hidden="true"><use href="#mark" /></svg>
+        <span class="brand__name">Nodo <em>Colibrí</em></span>
+      </a>
+
+      <ul class="nav__links" data-nav-links>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li class="nav__indicator" aria-hidden="true"></li>
+      </ul>
+
+      <a class="btn btn--primary btn--sm nav__cta" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me gustaría cotizar un sitio web.">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+        <span>Cotizar</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu glass" id="mobile-menu" data-menu>
+      <ul>
+        <li><a href="#servicios"><span>Servicios</span><small>01</small></a></li>
+        <li><a href="#proceso"><span>Proceso</span><small>02</small></a></li>
+        <li><a href="#planes"><span>Planes</span><small>03</small></a></li>
+        <li><a href="#portafolio"><span>Portafolio</span><small>04</small></a></li>
+        <li><a href="#faq"><span>Preguntas</span><small>05</small></a></li>
+        <li><a href="#contacto"><span>Contacto</span><small>06</small></a></li>
+      </ul>
+      <a class="btn btn--primary btn--block" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me gustaría cotizar un sitio web.">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+        <span>Escríbenos por WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__grid-lines" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+      <div class="hero__horizon" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow glass intro" style="--i:0">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Estudio digital de diseño y desarrollo web
+          </p>
+
+          <h1 class="display" id="hero-title">
+            <span class="intro" style="--i:1">Diseño web con</span>
+            <span class="intro" style="--i:2">la precisión de</span>
+            <span class="intro" style="--i:3">un <em class="text-glow">colibrí.</em></span>
+          </h1>
+
+          <p class="lede intro" style="--i:4">
+            Creamos sitios web premium, rápidos y memorables para marcas que quieren destacar.
+            Estrategia, diseño y desarrollo en un solo nodo&nbsp;— del primer boceto al lanzamiento.
+          </p>
+
+          <div class="hero__actions intro" style="--i:5">
+            <a class="btn btn--primary btn--lg" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me gustaría cotizar un sitio web.">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+              <span>Cotiza por WhatsApp</span>
+            </a>
+            <a class="btn btn--glass btn--lg" href="#planes">
+              <span>Ver planes</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+            </a>
+          </div>
+
+          <ul class="hero__meta intro" style="--i:6">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Cotización sin costo</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Diseño 100% a medida</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Optimizado para móviles</li>
+          </ul>
+        </div>
+
+        <!-- Escenario flotante con mockups de cristal -->
+        <div class="hero__stage" aria-hidden="true" data-stage>
+          <div class="stage-shape stage-shape--orb" data-depth="0.15"></div>
+          <div class="stage-shape stage-shape--ring" data-depth="0.3"></div>
+          <div class="stage-shape stage-shape--bar" data-depth="0.45"></div>
+          <div class="stage-shape stage-shape--dot" data-depth="0.9"></div>
+
+          <!-- Ventana de navegador -->
+          <div class="layer layer--browser" data-depth="0.35">
+            <div class="float float--a">
+              <div class="browser glass glass--strong stage-in" style="--i:2">
+                <div class="browser__inner">
+                  <div class="browser__bar">
+                    <span class="browser__dots"><i></i><i></i><i></i></span>
+                    <span class="browser__url"><svg class="icon"><use href="#i-lock" /></svg>tumarca.com</span>
+                    <span class="browser__tabs"><i></i><i></i></span>
+                  </div>
+                  <div class="browser__body">
+                    <div class="mk-nav">
+                      <span class="mk-logo"></span>
+                      <span class="mk-links"><i></i><i></i><i></i><i></i></span>
+                      <span class="mk-pill"></span>
+                    </div>
+                    <div class="mk-hero">
+                      <div class="mk-hero__text">
+                        <span class="mk-chip">Nueva colección</span>
+                        <strong class="mk-title">Tu marca,<br /><em>en pleno vuelo.</em></strong>
+                        <i class="mk-line"></i>
+                        <i class="mk-line mk-line--short"></i>
+                        <span class="mk-cta">Comenzar <svg class="icon"><use href="#i-arrow-right" /></svg></span>
+                      </div>
+                      <div class="mk-hero__art">
+                        <span class="mk-art-orb"></span>
+                        <span class="mk-art-orb mk-art-orb--sm"></span>
+                        <span class="mk-art-glass">
+                          <svg class="mk-art-mark"><use href="#mark" /></svg>
+                          <i></i><i></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mk-tiles">
+                      <span><b></b><i></i><i></i></span>
+                      <span><b></b><i></i><i></i></span>
+                      <span><b></b><i></i><i></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Puntaje -->
+          <div class="layer layer--score" data-depth="0.8">
+            <div class="float float--b">
+              <div class="score glass stage-in" style="--i:4">
+                <div class="score__head">
+                  <span>Rendimiento</span>
+                  <span class="score__live">En vivo</span>
+                </div>
+                <div class="score__body">
+                  <svg class="score__ring" viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="26" class="score__track" />
+                    <circle cx="32" cy="32" r="26" class="score__value" />
+                  </svg>
+                  <strong>98</strong>
+                </div>
+                <ul class="score__bars">
+                  <li><span>SEO</span><i style="--w:100%"></i></li>
+                  <li><span>Accesibilidad</span><i style="--w:96%"></i></li>
+                  <li><span>Velocidad</span><i style="--w:98%"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paleta -->
+          <div class="layer layer--palette" data-depth="0.6">
+            <div class="float float--e">
+              <div class="swatches glass stage-in" style="--i:5">
+                <span class="swatches__label">Paleta</span>
+                <div class="swatches__row">
+                  <i style="--c:#071D16"></i><i style="--c:#0D3024"></i><i style="--c:#176B4B"></i><i style="--c:#65D6A0"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="layer layer--phone" data-depth="1">
+            <div class="float float--c">
+              <div class="phone glass glass--strong stage-in" style="--i:6">
+                <div class="phone__screen">
+                  <span class="phone__notch"></span>
+                  <span class="phone__head"><i></i><b></b></span>
+                  <span class="phone__img"><svg><use href="#mark" /></svg></span>
+                  <span class="phone__title">Hecho para<br /><em>cada pantalla</em></span>
+                  <i class="phone__line"></i>
+                  <i class="phone__line phone__line--short"></i>
+                  <span class="phone__btn"></span>
+                  <span class="phone__tabbar"><i></i><i></i><i></i><i></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notificación -->
+          <div class="layer layer--toast" data-depth="1.25">
+            <div class="float float--d">
+              <div class="toast glass stage-in" style="--i:7">
+                <span class="toast__icon"><svg class="icon"><use href="#i-check" /></svg></span>
+                <span class="toast__text">
+                  <strong>Sitio publicado</strong>
+                  <small>tumarca.com · justo ahora</small>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#servicios" aria-label="Desplázate a servicios">
+        <span>Desliza</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee glass" aria-label="Lo que hacemos">
+      <div class="marquee__viewport">
+        <ul class="marquee__track">
+          <li>Diseño UI/UX</li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+          <li><em>Desarrollo web</em></li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+          <li>Tiendas en línea</li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+          <li><em>Identidad visual</em></li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+          <li>SEO técnico</li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+          <li><em>Landing pages</em></li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+          <li>Rendimiento</li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+          <li><em>Mantenimiento</em></li><li aria-hidden="true" class="marquee__sep"><svg><use href="#mark" /></svg></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section services" id="servicios" aria-labelledby="servicios-title">
+      <div class="deco deco--ring" data-parallax="0.12" aria-hidden="true"></div>
+      <div class="deco deco--orb deco--orb-services" data-parallax="-0.08" aria-hidden="true"></div>
+
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker reveal"><span>01</span>Servicios</p>
+          <h2 class="section-title reveal" id="servicios-title">Todo lo que tu marca necesita para <em>destacar</em> en línea.</h2>
+          <p class="section-intro reveal">Unimos estrategia, diseño y tecnología para construir experiencias digitales que se ven increíbles, cargan al instante y convierten visitas en clientes.</p>
+        </header>
+
+        <div class="bento">
+          <!-- Diseño -->
+          <article class="card card--design glass is-interactive lift reveal">
+            <div class="card__icon"><svg class="icon"><use href="#i-layout" /></svg></div>
+            <h3>Diseño web a medida</h3>
+            <p>Interfaces únicas, pensadas para tu marca y tus clientes. Nada de plantillas genéricas: cada sección se diseña con intención.</p>
+            <div class="layers" aria-hidden="true">
+              <div class="layers__stack">
+                <span class="lyr lyr--1"><i></i><i></i><i></i></span>
+                <span class="lyr lyr--2"><b></b><i></i><i></i></span>
+                <span class="lyr lyr--3"><b></b><b></b></span>
+              </div>
+              <ul class="layers__labels">
+                <li><span></span>Interacción</li>
+                <li><span></span>Interfaz</li>
+                <li><span></span>Contenido</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Desarrollo -->
+          <article class="card card--dev glass is-interactive lift reveal" style="--d:.08s">
+            <div class="card__icon"><svg class="icon"><use href="#i-code" /></svg></div>
+            <h3>Desarrollo de alto rendimiento</h3>
+            <p>Código limpio y moderno que carga rápido en cualquier dispositivo y escala junto a tu negocio.</p>
+            <pre class="code" aria-hidden="true"><code><span class="c-k">const</span> <span class="c-v">sitio</span> = <span class="c-f">crear</span>({
+  <span class="c-p">diseño</span>: <span class="c-s">'a medida'</span>,
+  <span class="c-p">velocidad</span>: <span class="c-s">'máxima'</span>,
+  <span class="c-p">seo</span>: <span class="c-k">true</span>,
+});</code></pre>
+          </article>
+
+          <!-- Tienda -->
+          <article class="card card--shop glass is-interactive lift reveal" style="--d:.12s">
+            <div class="card__icon"><svg class="icon"><use href="#i-bag" /></svg></div>
+            <h3>Tiendas en línea</h3>
+            <p>Catálogo, carrito y pagos en línea para que vendas las 24 horas, con una experiencia de compra impecable.</p>
+            <div class="product" aria-hidden="true">
+              <span class="product__thumb"></span>
+              <span class="product__info"><b>Café de altura</b><small>340 g · Tueste medio</small></span>
+              <span class="product__price">$14</span>
+              <span class="product__add"><svg class="icon"><use href="#i-plus" /></svg></span>
+            </div>
+          </article>
+
+          <!-- Identidad -->
+          <article class="card card--brand glass is-interactive lift reveal">
+            <div class="card__icon"><svg class="icon"><use href="#i-palette" /></svg></div>
+            <h3>Identidad visual</h3>
+            <p>Logotipo, paleta y tipografía coherentes para que tu marca se reconozca en cada punto de contacto.</p>
+            <div class="brandkit" aria-hidden="true">
+              <span class="brandkit__type">Aa</span>
+              <span class="brandkit__dots"><i></i><i></i><i></i><i></i></span>
+            </div>
+          </article>
+
+          <!-- SEO -->
+          <article class="card card--seo glass is-interactive lift reveal" style="--d:.08s">
+            <div class="card__icon"><svg class="icon"><use href="#i-search" /></svg></div>
+            <h3>SEO y analítica</h3>
+            <p>Estructura, velocidad y contenido optimizados para que te encuentren en Google y midas lo que funciona.</p>
+            <div class="serp" aria-hidden="true">
+              <span class="serp__url">tumarca.com</span>
+              <span class="serp__title">Tu marca — justo lo que buscabas</span>
+              <svg class="serp__spark" viewBox="0 0 120 32" preserveAspectRatio="none"><path d="M0 28 C 18 26, 24 22, 38 21 S 60 14, 72 15 S 96 6, 120 3" /></svg>
+            </div>
+          </article>
+
+          <!-- Mantenimiento -->
+          <article class="card card--care glass is-interactive lift reveal" style="--d:.16s">
+            <div class="card__icon"><svg class="icon"><use href="#i-shield" /></svg></div>
+            <h3>Mantenimiento y soporte</h3>
+            <p>Actualizaciones, copias de seguridad y mejoras continuas para que tu sitio siempre esté en su mejor forma.</p>
+            <ul class="toggles" aria-hidden="true">
+              <li>Copias de seguridad<i></i></li>
+              <li>Actualizaciones<i></i></li>
+              <li>Monitoreo<i></i></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESO ============ -->
+    <section class="section process" id="proceso" aria-labelledby="proceso-title">
+      <div class="deco deco--orb deco--orb-process" data-parallax="0.1" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker reveal"><span>02</span>Proceso</p>
+          <h2 class="section-title reveal" id="proceso-title">Un proceso claro, <em>ágil</em> y sin sorpresas.</h2>
+          <p class="section-intro reveal">Trabajamos por etapas para que siempre sepas en qué punto está tu proyecto y qué viene después. Cada etapa se conecta con la siguiente, como los nodos de una red.</p>
+        </header>
+
+        <div class="process-panel glass glass--soft reveal" data-track>
+          <div class="track" aria-hidden="true"><span class="track__fill"></span></div>
+          <ol class="steps">
+            <li class="step" style="--n:0">
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__num">01</span>
+              <h3>Descubrir</h3>
+              <p>Conversamos sobre tu negocio, tus objetivos y tu público para definir la estrategia del sitio.</p>
+              <span class="chip">Brief y propuesta</span>
+            </li>
+            <li class="step" style="--n:1">
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__num">02</span>
+              <h3>Diseñar</h3>
+              <p>Creamos la dirección visual y un prototipo para que veas tu sitio antes de programarlo.</p>
+              <span class="chip">Prototipo navegable</span>
+            </li>
+            <li class="step" style="--n:2">
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__num">03</span>
+              <h3>Desarrollar</h3>
+              <p>Construimos tu sitio con código optimizado, responsive y listo para posicionarse.</p>
+              <span class="chip">Sitio funcional</span>
+            </li>
+            <li class="step" style="--n:3">
+              <span class="step__node" aria-hidden="true"></span>
+              <span class="step__num">04</span>
+              <h3>Lanzar</h3>
+              <p>Publicamos, conectamos tu dominio y te acompañamos después del lanzamiento.</p>
+              <span class="chip">Lanzamiento y soporte</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PLANES ============ -->
+    <section class="section plans" id="planes" aria-labelledby="planes-title">
+      <div class="deco deco--plans-glow" aria-hidden="true"></div>
+      <div class="deco deco--cube" data-parallax="-0.14" aria-hidden="true"></div>
+
+      <div class="container">
+        <header class="section-head section-head--center">
+          <p class="kicker reveal"><span>03</span>Planes</p>
+          <h2 class="section-title reveal" id="planes-title">Planes transparentes para cada <em>etapa</em> de tu marca.</h2>
+          <p class="section-intro reveal">Precios de referencia en dólares, con pago único. Después de conocer tu proyecto te enviamos una propuesta exacta, sin costos ocultos.</p>
+        </header>
+
+        <div class="plans-grid">
+          <!-- Esencial -->
+          <article class="plan glass is-interactive lift reveal">
+            <header class="plan__head">
+              <span class="plan__name">Esencial</span>
+              <p class="plan__desc">Ideal para lanzar tu presencia en línea con una página de alto impacto.</p>
+            </header>
+            <div class="plan__price"><span class="plan__currency">$</span>390<span class="plan__unit">USD<br />pago único</span></div>
+            <ul class="plan__list">
+              <li><svg class="icon"><use href="#i-check" /></svg>Sitio de una página (landing page)</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Diseño responsive para todo dispositivo</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Botón y enlace directo a WhatsApp</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Formulario de contacto</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>SEO básico y Google Analytics</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>15 días de soporte</li>
+            </ul>
+            <p class="plan__time">Entrega estimada: 1–2 semanas</p>
+            <a class="btn btn--glass btn--block" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me interesa el plan Esencial. ¿Me pueden dar más información?">
+              <span>Elegir Esencial</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+          </article>
+
+          <!-- Profesional -->
+          <article class="plan plan--featured glass is-interactive lift reveal" style="--d:.1s">
+            <span class="plan__badge"><svg class="icon" aria-hidden="true"><use href="#i-sparkle" /></svg>Recomendado</span>
+            <header class="plan__head">
+              <span class="plan__name">Profesional</span>
+              <p class="plan__desc">Para negocios que buscan un sitio completo, elegante y listo para crecer.</p>
+            </header>
+            <div class="plan__price"><span class="plan__currency">$</span>790<span class="plan__unit">USD<br />pago único</span></div>
+            <ul class="plan__list">
+              <li><svg class="icon"><use href="#i-check" /></svg>Hasta 6 secciones o páginas</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Diseño premium a medida con animaciones</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Blog o catálogo autoadministrable</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>SEO on-page y velocidad optimizada</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Integración con WhatsApp, redes y mapas</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>1 mes de soporte después del lanzamiento</li>
+            </ul>
+            <p class="plan__time">Entrega estimada: 2–4 semanas</p>
+            <a class="btn btn--primary btn--block" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me interesa el plan Profesional. ¿Me pueden dar más información?">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+              <span>Elegir Profesional</span>
+            </a>
+          </article>
+
+          <!-- Premium -->
+          <article class="plan glass is-interactive lift reveal" style="--d:.2s">
+            <header class="plan__head">
+              <span class="plan__name">Premium</span>
+              <p class="plan__desc">Tiendas en línea y proyectos a medida con funcionalidades avanzadas.</p>
+            </header>
+            <div class="plan__price"><span class="plan__from">desde</span><span class="plan__currency">$</span>1,490<span class="plan__unit">USD<br />pago único</span></div>
+            <ul class="plan__list">
+              <li><svg class="icon"><use href="#i-check" /></svg>Tienda en línea o sitio a medida</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Pagos en línea y gestión de inventario</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Panel administrable e integraciones</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>SEO avanzado y analítica de conversión</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>Capacitación para tu equipo</li>
+              <li><svg class="icon"><use href="#i-check" /></svg>3 meses de soporte prioritario</li>
+            </ul>
+            <p class="plan__time">Entrega estimada: 4–8 semanas</p>
+            <a class="btn btn--glass btn--block" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me interesa el plan Premium. ¿Me pueden dar más información?">
+              <span>Elegir Premium</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="plans-note glass glass--soft reveal">
+          <div class="plans-note__included">
+            <span class="plans-note__label">Todos los planes incluyen</span>
+            <ul>
+              <li>Certificado SSL</li>
+              <li>Diseño responsive</li>
+              <li>Optimización de velocidad</li>
+              <li>Asesoría de dominio y hosting</li>
+            </ul>
+          </div>
+          <a class="link-arrow" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, necesito un plan a la medida para mi proyecto.">
+            ¿Necesitas algo diferente? <strong>Cotiza un plan a medida</strong>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTAFOLIO ============ -->
+    <section class="section work" id="portafolio" aria-labelledby="portafolio-title">
+      <div class="deco deco--slab" data-parallax="0.1" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker reveal"><span>04</span>Portafolio</p>
+          <h2 class="section-title reveal" id="portafolio-title">Proyectos que <em>se sienten</em> diferentes.</h2>
+          <p class="section-intro reveal">Una muestra de la dirección visual que podemos llevar a tu marca: interfaces limpias, con profundidad y pensadas para convertir.</p>
+        </header>
+
+        <div class="work-grid">
+          <!-- Proyecto 1 -->
+          <article class="project project--cafe glass is-interactive lift reveal">
+            <div class="project__screen" aria-hidden="true">
+              <div class="project__page">
+                <div class="pg-nav"><b>Montaña</b><span><i></i><i></i><i></i></span><em>Tienda</em></div>
+                <div class="pg-hero">
+                  <div class="pg-hero__text">
+                    <small>Café de especialidad</small>
+                    <strong>Cultivado entre nubes.</strong>
+                    <span class="pg-btn">Comprar ahora</span>
+                  </div>
+                  <div class="pg-hero__art"><span class="cup"></span><span class="bean"></span><span class="bean bean--2"></span></div>
+                </div>
+                <div class="pg-products"><span></span><span></span><span></span></div>
+                <div class="pg-band"><strong>Del grano a tu taza</strong><i></i><i></i></div>
+                <div class="pg-products"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="project__meta">
+              <div>
+                <p class="project__kicker">Concepto · E-commerce</p>
+                <h3>Montaña Café</h3>
+                <p class="project__desc">Tienda en línea para un café de especialidad, con una experiencia cálida y artesanal.</p>
+              </div>
+              <ul class="tags"><li>Tienda en línea</li><li>Branding</li><li>UI</li></ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project project--clinic glass is-interactive lift reveal" style="--d:.08s">
+            <div class="project__screen" aria-hidden="true">
+              <div class="project__page">
+                <div class="pg-nav"><b>Aurora</b><span><i></i><i></i><i></i></span><em>Agendar</em></div>
+                <div class="pg-hero pg-hero--center">
+                  <small>Clínica integral</small>
+                  <strong>Tu bienestar, en buenas manos.</strong>
+                  <span class="pg-btn">Reservar cita</span>
+                </div>
+                <div class="pg-cards"><span></span><span></span><span></span></div>
+                <div class="pg-band"><strong>Especialidades</strong><i></i><i></i></div>
+                <div class="pg-cards"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="project__meta">
+              <div>
+                <p class="project__kicker">Concepto · Salud</p>
+                <h3>Clínica Aurora</h3>
+              </div>
+              <ul class="tags"><li>Sitio web</li><li>Reservas</li></ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project project--arch glass is-interactive lift reveal" style="--d:.16s">
+            <div class="project__screen" aria-hidden="true">
+              <div class="project__page">
+                <div class="pg-nav"><b>LUMEN</b><span><i></i><i></i><i></i></span><em>Contacto</em></div>
+                <div class="pg-hero pg-hero--arch">
+                  <strong>Espacios que respiran luz.</strong>
+                  <div class="blocks"><span></span><span></span><span></span></div>
+                </div>
+                <div class="pg-grid"><span></span><span></span><span></span><span></span></div>
+                <div class="pg-band"><strong>Obras seleccionadas</strong><i></i></div>
+                <div class="pg-grid"><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="project__meta">
+              <div>
+                <p class="project__kicker">Concepto · Arquitectura</p>
+                <h3>Lumen Arquitectura</h3>
+              </div>
+              <ul class="tags"><li>Portafolio</li><li>Editorial</li></ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 (ancho) -->
+          <article class="project project--tours project--wide glass is-interactive lift reveal">
+            <div class="project__meta">
+              <div>
+                <p class="project__kicker">Concepto · Turismo</p>
+                <h3>Ruta Verde</h3>
+                <p class="project__desc">Plataforma de tours de aventura con reservas en línea, galerías inmersivas y un recorrido visual que invita a explorar.</p>
+              </div>
+              <ul class="tags"><li>Reservas en línea</li><li>Galerías</li><li>Multidioma</li></ul>
+            </div>
+            <div class="project__screen" aria-hidden="true">
+              <div class="project__page">
+                <div class="pg-nav"><b>Ruta Verde</b><span><i></i><i></i><i></i><i></i></span><em>Reservar</em></div>
+                <div class="pg-hero pg-hero--tours">
+                  <div class="mountains"><span></span><span></span><span></span></div>
+                  <div class="pg-hero__text">
+                    <small>Aventura · Naturaleza</small>
+                    <strong>Explora lo salvaje.</strong>
+                    <span class="pg-btn">Ver tours</span>
+                  </div>
+                  <div class="pg-search"><i></i><i></i><i></i><b></b></div>
+                </div>
+                <div class="pg-products pg-products--4"><span></span><span></span><span></span><span></span></div>
+                <div class="pg-band"><strong>Experiencias destacadas</strong><i></i><i></i></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="work-cta reveal">
+          <p>¿Tienes una idea en mente? <em>Hagámosla realidad.</em></p>
+          <a class="btn btn--glass" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, tengo una idea para un sitio web y me gustaría conversarla.">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+            <span>Cuéntanos tu idea</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="deco deco--sphere" data-parallax="-0.1" aria-hidden="true"></div>
+      <div class="container faq__layout">
+        <div class="faq__aside">
+          <header class="section-head section-head--stack">
+            <p class="kicker reveal"><span>05</span>Preguntas frecuentes</p>
+            <h2 class="section-title reveal" id="faq-title">Resolvemos tus <em>dudas.</em></h2>
+            <p class="section-intro reveal">Si no encuentras lo que buscas, escríbenos y te respondemos personalmente.</p>
+          </header>
+          <div class="faq__help glass glass--tint is-interactive reveal">
+            <span class="faq__help-icon"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg></span>
+            <div>
+              <strong>¿Otra pregunta?</strong>
+              <p>Hablemos por WhatsApp, sin compromiso.</p>
+            </div>
+            <a class="btn btn--primary btn--sm" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, tengo una pregunta sobre sus servicios.">Preguntar</a>
+          </div>
+        </div>
+
+        <div class="accordion glass glass--soft reveal" data-accordion>
+          <div class="acc__item">
+            <h3><button class="acc__q" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-q">¿Cuánto tiempo tarda en estar listo mi sitio web?<span class="acc__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span></button></h3>
+            <div class="acc__a" id="faq-1" role="region" aria-labelledby="faq-1-q"><div><p>Depende del plan y del alcance: una landing page suele estar lista en 1 a 2 semanas y un sitio profesional entre 2 y 4 semanas. Desde el inicio te compartimos un cronograma claro con cada entrega.</p></div></div>
+          </div>
+          <div class="acc__item">
+            <h3><button class="acc__q" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-q">¿Necesito tener dominio y hosting?<span class="acc__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span></button></h3>
+            <div class="acc__a" id="faq-2" role="region" aria-labelledby="faq-2-q"><div><p>No es necesario. Si ya los tienes, trabajamos con ellos; si no, te asesoramos para elegir y configurar las mejores opciones para tu proyecto y tu presupuesto.</p></div></div>
+          </div>
+          <div class="acc__item">
+            <h3><button class="acc__q" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-q">¿Podré actualizar el contenido yo mismo?<span class="acc__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span></button></h3>
+            <div class="acc__a" id="faq-3" role="region" aria-labelledby="faq-3-q"><div><p>Sí. En los planes Profesional y Premium incluimos un panel administrable y una capacitación para que edites textos, imágenes y productos sin depender de nadie.</p></div></div>
+          </div>
+          <div class="acc__item">
+            <h3><button class="acc__q" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-q">¿Mi sitio se verá bien en celulares?<span class="acc__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span></button></h3>
+            <div class="acc__a" id="faq-4" role="region" aria-labelledby="faq-4-q"><div><p>Siempre. Diseñamos pensando primero en móviles y probamos en distintos tamaños de pantalla para que la experiencia sea impecable en cualquier dispositivo.</p></div></div>
+          </div>
+          <div class="acc__item">
+            <h3><button class="acc__q" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-q">¿Cómo funcionan los pagos?<span class="acc__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span></button></h3>
+            <div class="acc__a" id="faq-5" role="region" aria-labelledby="faq-5-q"><div><p>Normalmente trabajamos con un 50% de anticipo para iniciar y el 50% restante al entregar el sitio. Si lo necesitas, podemos conversar otras opciones.</p></div></div>
+          </div>
+          <div class="acc__item">
+            <h3><button class="acc__q" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-q">¿Qué pasa después del lanzamiento?<span class="acc__icon" aria-hidden="true"><svg class="icon"><use href="#i-plus" /></svg></span></button></h3>
+            <div class="acc__a" id="faq-6" role="region" aria-labelledby="faq-6-q"><div><p>Seguimos a tu lado. Todos los planes incluyen un período de soporte y, si lo deseas, puedes contratar mantenimiento mensual para actualizaciones, respaldos y mejoras continuas.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="contact-panel glass glass--soft reveal">
+          <div class="contact-panel__light" aria-hidden="true"></div>
+
+          <div class="contact__info">
+            <p class="kicker"><span>06</span>Contacto</p>
+            <h2 class="section-title" id="contacto-title">Hablemos de tu <em>próximo</em> sitio web.</h2>
+            <p class="section-intro">Cuéntanos sobre tu proyecto y te enviaremos una propuesta a la medida. Sin compromiso y sin letra pequeña.</p>
+
+            <a class="wa-card glass glass--tint is-interactive" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me gustaría cotizar un sitio web.">
+              <span class="wa-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg></span>
+              <span class="wa-card__text">
+                <small>Escríbenos por WhatsApp</small>
+                <strong>+506 8779 7996</strong>
+              </span>
+              <span class="wa-card__arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg></span>
+            </a>
+
+            <ul class="contact__points">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Cotización sin costo ni compromiso</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Atención personalizada de principio a fin</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg>Propuesta clara con tiempos y alcance</li>
+            </ul>
+          </div>
+
+          <form class="form" data-wa-form novalidate>
+            <p class="form__title">Arma tu mensaje <span>y envíalo por WhatsApp</span></p>
+
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamas?" required />
+            </div>
+
+            <div class="field">
+              <label for="f-tipo">¿Qué necesitas?</label>
+              <select id="f-tipo" name="tipo">
+                <option>Una landing page</option>
+                <option selected>Un sitio web profesional</option>
+                <option>Una tienda en línea</option>
+                <option>Rediseñar mi sitio actual</option>
+                <option>Otro proyecto</option>
+              </select>
+            </div>
+
+            <fieldset class="field">
+              <legend>Plan de interés</legend>
+              <div class="choice">
+                <label><input type="radio" name="plan" value="Esencial" /><span>Esencial</span></label>
+                <label><input type="radio" name="plan" value="Profesional" checked /><span>Profesional</span></label>
+                <label><input type="radio" name="plan" value="Premium" /><span>Premium</span></label>
+                <label><input type="radio" name="plan" value="Aún no lo sé" /><span>No estoy seguro</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="f-mensaje">Cuéntanos de tu proyecto <span class="optional">(opcional)</span></label>
+              <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Tu negocio, tus objetivos, sitios que te gustan…"></textarea>
+            </div>
+
+            <p class="form__error" role="alert" data-form-error></p>
+
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+              <span>Enviar por WhatsApp</span>
+            </button>
+            <p class="form__note">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="#inicio" aria-label="Nodo Colibrí, ir al inicio">
+            <svg class="brand__mark" aria-hidden="true"><use href="#mark" /></svg>
+            <span class="brand__name">Nodo <em>Colibrí</em></span>
+          </a>
+          <p>Estudio digital de diseño y desarrollo web. Creamos sitios premium con la precisión de un colibrí.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Pie de página">
+          <div>
+            <p>Estudio</p>
+            <ul>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#proceso">Proceso</a></li>
+              <li><a href="#planes">Planes</a></li>
+              <li><a href="#portafolio">Portafolio</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>Ayuda</p>
+            <ul>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me gustaría cotizar un sitio web.">WhatsApp +506 8779 7996</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <p class="footer__word" aria-hidden="true">Nodo <em>Colibrí</em></p>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Nodo Colibrí. Todos los derechos reservados.</p>
+        <p>Diseñado con precisión de colibrí.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-fab" href="https://wa.me/50687797996" data-wa="Hola Nodo Colibrí, me gustaría cotizar un sitio web." aria-label="Escríbenos por WhatsApp" data-fab>
+    <span class="wa-fab__label">¿Hablamos?</span>
+    <span class="wa-fab__btn"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp" /></svg></span>
+  </a>
+</body>
+</html>
