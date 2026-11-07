@@ -52,9 +52,10 @@ abre WhatsApp listo para enviar.
 - **Precios de los planes** (sección `#planes`): Esencial $300, Profesional $445 y Premium $555 USD
   (equivalentes a L 8,000, L 12,000 y L 15,000).
 - **Alcances, tiempos de entrega y soporte** de cada plan (planes y preguntas frecuentes).
-- **Portafolio** (sección `#portafolio`): Aromatic y Giron Painting son proyectos reales; sus
-  capturas están en `assets/img/portfolio/` y enlazan a sus sitios en GitHub Pages. Clínica Aurora
-  y Lumen Arquitectura son *conceptos* dibujados con CSS que puedes sustituir por nuevos proyectos.
+- **Portafolio** (sección `#portafolio`): solo proyectos reales, Aromatic y Giron Painting. Sus
+  capturas (escritorio y móvil, en WebP) están en `assets/img/portfolio/` y cada tarjeta enlaza al
+  sitio publicado en GitHub Pages. Para sumar un proyecto, duplica un `<article class="project">`,
+  agrega sus capturas y ajusta `--scroll` (cuánto recorre la página al pasar el cursor).
 - **Imagen para redes**: `og:image` usa una ruta relativa; cuando el sitio tenga dominio, cámbiala
   por la URL absoluta (por ejemplo `https://tudominio.com/assets/img/og-image.jpg`).
 
