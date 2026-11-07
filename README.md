@@ -13,7 +13,7 @@ listo para publicarse en GitHub Pages, Netlify, Vercel o cualquier hosting.
 index.html              Contenido y estructura de todas las secciones
 assets/css/styles.css   Sistema de diseño (tokens, cristal, secciones, animaciones)
 assets/js/main.js       Interacciones (WhatsApp, menú, parallax, FAQ, formulario)
-assets/img/             Logotipo, favicon e imagen para redes (og-image.jpg)
+assets/img/             Logotipo, favicon, imagen para redes y capturas del portafolio
 ```
 
 ## Verlo en local
@@ -30,13 +30,13 @@ python3 -m http.server 4173
 Todos los botones de WhatsApp se generan desde una sola constante en `assets/js/main.js`:
 
 ```js
-const WHATSAPP_NUMBER = '50687797996'; // código de país + número, sin "+" ni espacios
+const WHATSAPP_NUMBER = '50487797996'; // código de país + número, sin "+" ni espacios
 ```
 
-El número está configurado con el código de **Costa Rica (+506)**. Si corresponde a otro país,
-cambia el prefijo ahí y también en `index.html` (enlaces de respaldo `https://wa.me/50687797996`,
-el número visible `+506 8779 7996` y el `telephone` del bloque JSON-LD). Un reemplazo global de
-`50687797996` y de `+506 8779 7996` cubre todo.
+El número es de **Honduras (+504)**. Si cambia, actualízalo ahí y también en `index.html`
+(enlaces de respaldo `https://wa.me/50487797996`, el número visible `+504 8779 7996` y el
+`telephone` del bloque JSON-LD). Un reemplazo global de `50487797996` y de `+504 8779 7996`
+cubre todo.
 
 Cada botón define su mensaje prellenado en el atributo `data-wa`, por ejemplo:
 
@@ -49,10 +49,12 @@ abre WhatsApp listo para enviar.
 
 ### Contenido de referencia que conviene revisar
 
-- **Precios y alcances de los planes** (sección `#planes`): $390, $790 y desde $1,490 USD son valores de referencia.
-- **Tiempos de entrega y soporte** (planes y preguntas frecuentes).
-- **Portafolio** (sección `#portafolio`): los cuatro proyectos están marcados como *Concepto* y
-  sus pantallas están dibujadas con CSS. Reemplázalos por proyectos reales cuando los tengas.
+- **Precios de los planes** (sección `#planes`): Esencial $300, Profesional $445 y Premium $555 USD
+  (equivalentes a L 8,000, L 12,000 y L 15,000).
+- **Alcances, tiempos de entrega y soporte** de cada plan (planes y preguntas frecuentes).
+- **Portafolio** (sección `#portafolio`): Aromatic y Giron Painting son proyectos reales; sus
+  capturas están en `assets/img/portfolio/` y enlazan a sus sitios en GitHub Pages. Clínica Aurora
+  y Lumen Arquitectura son *conceptos* dibujados con CSS que puedes sustituir por nuevos proyectos.
 - **Imagen para redes**: `og:image` usa una ruta relativa; cuando el sitio tenga dominio, cámbiala
   por la URL absoluta (por ejemplo `https://tudominio.com/assets/img/og-image.jpg`).
 

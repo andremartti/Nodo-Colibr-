@@ -6,9 +6,9 @@
 
   /* ------------------------------------------------------------------------
      WhatsApp: número único para todo el sitio.
-     Formato internacional sin "+" ni espacios (506 = Costa Rica).
+     Formato internacional sin "+" ni espacios (504 = Honduras).
      ------------------------------------------------------------------------ */
-  const WHATSAPP_NUMBER = '50687797996';
+  const WHATSAPP_NUMBER = '50487797996';
   const DEFAULT_MESSAGE = 'Hola Nodo Colibrí, me gustaría cotizar un sitio web.';
 
   const waLink = (message = DEFAULT_MESSAGE) =>
