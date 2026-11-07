@@ -49,9 +49,18 @@ abre WhatsApp listo para enviar.
 
 ### Contenido de referencia que conviene revisar
 
-- **Precios de los planes** (sección `#planes`): Esencial $300, Profesional $445 y Premium $555 USD
-  (equivalentes a L 8,000, L 12,000 y L 15,000).
-- **Alcances, tiempos de entrega y soporte** de cada plan (planes y preguntas frecuentes).
+- **Planes** (sección `#planes`): siguen el documento *Planes Nodo Colibrí* (noviembre de 2026),
+  con precios convertidos a dólares a unos L 27 por dólar:
+
+  | Plan        | Pago inicial          | Mantenimiento mensual | Entrega              |
+  | ----------- | --------------------- | --------------------- | -------------------- |
+  | Básico      | $300 (L 8,000)        | No incluido           | 5 días hábiles       |
+  | Profesional | $445 (L 12,000)       | $30 (L 800)           | 7 a 10 días hábiles  |
+  | Premium     | $555 (L 15,000)       | $45 (L 1,200)         | 15 a 20 días hábiles |
+
+  Pago anual de la mensualidad con 10% de descuento: $324 (Profesional) y $486 (Premium). El
+  dominio lo paga el cliente al proveedor (aprox. $20 a $55, L 500 a L 1,500, al año). Si cambian
+  los precios, actualiza también las preguntas frecuentes, que repiten algunos de estos datos.
 - **Portafolio** (sección `#portafolio`): solo proyectos reales, Aromatic y Giron Painting. Sus
   capturas (escritorio y móvil, en WebP) están en `assets/img/portfolio/` y cada tarjeta enlaza al
   sitio publicado en GitHub Pages. Para sumar un proyecto, duplica un `<article class="project">`,
