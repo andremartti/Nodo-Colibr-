@@ -1,14 +1,18 @@
 # Publica el sitio en GitHub Pages: https://andremartti.github.io/Nodo-Colibr-/
 #
 # Configuración (una sola vez): Settings → Pages → Build and deployment →
-# Source: "GitHub Actions". Después, cada cambio que llegue a main se publica solo.
-# También se puede lanzar a mano: pestaña Actions → "Publicar sitio" → Run workflow.
+# Source: "GitHub Actions". Después, cada cambio que llegue a la rama principal
+# del repositorio se publica solo. También se puede lanzar a mano: pestaña
+# Actions → "Publicar sitio" → Run workflow.
+#
+# GitHub solo permite publicar desde la rama principal (Settings → Default branch).
+# Hoy es claude/wizardly-allen-k1vlok; si se cambia a main, se publicará desde main.
 
 name: Publicar sitio
 
 on:
   push:
-    branches: [main]
+    branches: [main, claude/wizardly-allen-k1vlok]
   workflow_dispatch:
 
 permissions:
