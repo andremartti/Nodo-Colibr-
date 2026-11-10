@@ -154,7 +154,6 @@
   /* Parallax sutil --------------------------------------------------------- */
   const stage = $('[data-stage]');
   const depthLayers = stage ? $$('[data-depth]', stage) : [];
-  const parallaxEls = $$('[data-parallax]');
 
   let pointerX = 0;
   let pointerY = 0;
@@ -181,15 +180,6 @@
       // Sigue animando mientras el suavizado no haya convergido
       if (Math.abs(pointerX - curX) > 0.001 || Math.abs(pointerY - curY) > 0.001) requestTick();
     }
-
-    // Decoraciones de sección
-    parallaxEls.forEach((el) => {
-      const parent = el.parentElement.getBoundingClientRect();
-      if (parent.bottom < -200 || parent.top > vh + 200) return;
-      const speed = parseFloat(el.dataset.parallax) || 0;
-      const offset = (parent.top + parent.height / 2 - vh / 2) * speed;
-      el.style.translate = `0 ${offset.toFixed(1)}px`;
-    });
   };
 
   const requestTick = () => {
@@ -218,8 +208,17 @@
 
   window.addEventListener('scroll', () => {
     onScrollState();
-    if (enableParallax()) requestTick();
+    if (enableParallax() && heroVisible) requestTick();
   }, { passive: true });
+
+  /* Pausa las animaciones de las secciones que no están en pantalla -------- */
+  const pausable = $$('[data-pause]');
+  if ('IntersectionObserver' in window && pausable.length) {
+    const pauseObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => entry.target.classList.toggle('is-paused', !entry.isIntersecting));
+    }, { rootMargin: '100px 0px' });
+    pausable.forEach((el) => pauseObserver.observe(el));
+  }
 
   window.addEventListener('resize', () => {
     moveIndicator(activeLink);
