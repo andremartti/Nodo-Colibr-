@@ -16,6 +16,13 @@ assets/js/main.js       Interacciones (WhatsApp, menú, parallax, FAQ, formulari
 assets/img/             Logotipo, favicon, imagen para redes y capturas del portafolio
 ```
 
+## Publicación
+
+El sitio se publica en GitHub Pages con `.github/workflows/pages.yml` cada vez que llegan cambios
+a `main`: https://andremartti.github.io/Nodo-Colibr-/
+
+Configuración única: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
 ## Verlo en local
 
 ```bash
@@ -65,8 +72,8 @@ abre WhatsApp listo para enviar.
   capturas (escritorio y móvil, en WebP) están en `assets/img/portfolio/` y cada tarjeta enlaza al
   sitio publicado en GitHub Pages. Para sumar un proyecto, duplica un `<article class="project">`,
   agrega sus capturas y ajusta `--scroll` (cuánto recorre la página al pasar el cursor).
-- **Imagen para redes**: `og:image` usa una ruta relativa; cuando el sitio tenga dominio, cámbiala
-  por la URL absoluta (por ejemplo `https://tudominio.com/assets/img/og-image.jpg`).
+- **Imagen para redes**: `og:image` y `og:url` apuntan a `https://andremartti.github.io/Nodo-Colibr-/`;
+  si el sitio pasa a un dominio propio, cambia esas dos URL.
 
 ### Colores
 
