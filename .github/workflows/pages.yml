@@ -40,6 +40,15 @@ jobs:
           mkdir -p _site
           cp index.html _site/
           cp -r assets _site/
+          # Versión en los enlaces de CSS y JS: obliga al navegador a descargar
+          # los archivos nuevos en cada publicación en lugar de usar su copia guardada.
+          V="${GITHUB_SHA::7}"
+          sed -i \
+            -e "s#assets/css/styles.css#assets/css/styles.css?v=$V#" \
+            -e "s#assets/js/main.js#assets/js/main.js?v=$V#" \
+            -e "s#<html lang=\"es\" class=\"no-js\">#<html lang=\"es\" class=\"no-js\" data-version=\"$V\">#" \
+            _site/index.html
+          grep -o 'styles.css?v=[a-f0-9]*\|main.js?v=[a-f0-9]*\|data-version="[a-f0-9]*"' _site/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
