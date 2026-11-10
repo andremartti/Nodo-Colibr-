@@ -389,6 +389,36 @@ fieldset { border: 0; min-width: 0; }
   border-color: rgb(101 214 160 / .16);
 }
 
+/* Cristal esmerilado sin desenfoque en tiempo real: mismo tinte, borde de luz y reflejo,
+   con un fondo algo más denso. Se usa donde el desenfoque real casi no se nota pero
+   cuesta mucho (paneles en 3D, paneles pequeños sobre fondo liso, franjas animadas). */
+.glass--faux {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  --glass-tint: rgb(13 40 30 / .88);
+}
+.browser.glass--faux { --glass-tint: rgb(14 44 33 / .86); }
+.eyebrow.glass--faux { --glass-tint: rgb(12 38 29 / .6); }
+.marquee.glass--faux { --glass-tint: rgb(9 30 23 / .55); }
+
+/* Cristal dentro de otro cristal: el panel exterior ya desenfoca el fondo */
+.glass--nested {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* Tarjetas de las secciones: detrás solo hay luces suaves y formas ya desenfocadas,
+   así que el panel translúcido se ve esmerilado sin recalcular un desenfoque en cada
+   cuadro del scroll. El desenfoque real queda en el menú, el menú móvil, el teléfono
+   del inicio y el botón de WhatsApp, donde el contenido pasa por detrás. */
+.section .glass {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  --glass-tint: rgb(10 34 26 / .42);
+}
+.section .glass--tint { --glass-tint: rgb(23 107 75 / .26); }
+.section .plan--featured { --glass-tint: rgb(23 107 75 / .3); }
+
 .is-interactive {
   transition:
     --spot .5s var(--ease),
@@ -983,10 +1013,8 @@ fieldset { border: 0; min-width: 0; }
   left: 1.6em; right: 1.6em; top: 3.2em;
   padding: 1em;
   border-radius: 1em;
-  background: linear-gradient(150deg, rgb(255 255 255 / .2), rgb(255 255 255 / .05));
+  background: linear-gradient(150deg, rgb(255 255 255 / .2), rgb(255 255 255 / .05)), rgb(18 60 44 / .55);
   border: 1px solid rgb(255 255 255 / .25);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   box-shadow: inset 0 1px 0 rgb(255 255 255 / .35), 0 10px 30px -10px rgb(0 0 0 / .5);
 }
 .mk-art-mark { width: 2.6em; height: 2.6em; margin-bottom: .6em; }
@@ -1941,10 +1969,8 @@ fieldset { border: 0; min-width: 0; }
   width: clamp(88px, 21%, 148px);
   padding: 5px;
   border-radius: 22px;
-  background: linear-gradient(160deg, rgb(255 255 255 / .3), rgb(255 255 255 / .08));
+  background: linear-gradient(160deg, rgb(255 255 255 / .3), rgb(255 255 255 / .08)), rgb(20 34 28 / .6);
   border: 1px solid rgb(255 255 255 / .35);
-  -webkit-backdrop-filter: blur(14px) saturate(160%);
-  backdrop-filter: blur(14px) saturate(160%);
   box-shadow: inset 0 1px 0 rgb(255 255 255 / .45), 0 24px 50px -16px rgb(0 0 0 / .75);
   transition: transform .8s var(--ease);
 }
@@ -2489,7 +2515,7 @@ fieldset { border: 0; min-width: 0; }
 /* Pantallas pequeñas: menos capas animadas detrás del cristal */
 @media (max-width: 960px) {
   .light--3, .light--4 { display: none; }
-  .deco--ring, .deco--cube, .deco--slab, .deco--sphere { filter: none; opacity: .3; }
+  .deco--ring, .deco--cube, .deco--slab, .deco--sphere { opacity: .35; }
 }
 
 /* Navegadores sin backdrop-filter: cristal más opaco para mantener legibilidad */
