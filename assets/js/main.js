@@ -41,6 +41,11 @@
     if (scrolled !== lastScrollState) {
       header.classList.toggle('is-scrolled', scrolled);
       lastScrollState = scrolled;
+      setTimeout(() => {
+        const target = indicatorTarget;
+        indicatorTarget = null;
+        if (target) moveIndicator(target);
+      }, 420);
     }
     if (fab) fab.classList.toggle('is-visible', y > window.innerHeight * 0.65);
   };
@@ -70,17 +75,23 @@
 
   /* Indicador de cristal en los enlaces + sección activa ------------------- */
   const navList = $('[data-nav-links]');
-  const indicator = $('.nav__indicator', navList);
+  const indicator = $('.nav__indicator', header);
   const navLinks = $$('a', navList);
   let activeLink = null;
 
+  let indicatorTarget = null;
   const moveIndicator = (link) => {
     if (!link || !navList.offsetParent) {
+      indicatorTarget = null;
       indicator.style.opacity = '0';
       return;
     }
-    indicator.style.width = `${link.offsetWidth}px`;
-    indicator.style.transform = `translateX(${link.offsetLeft}px)`;
+    if (link === indicatorTarget && indicator.style.opacity === '1') return;
+    indicatorTarget = link;
+    const r = link.getBoundingClientRect();
+    const h = header.getBoundingClientRect();
+    indicator.style.width = `${r.width}px`;
+    indicator.style.transform = `translate3d(${(r.left - h.left).toFixed(1)}px, ${(r.top - h.top + r.height / 2 - 18).toFixed(1)}px, 0)`;
     indicator.style.opacity = '1';
   };
 
@@ -164,22 +175,15 @@
 
   const render = () => {
     ticking = false;
-    const vh = window.innerHeight;
-
-    // Hero: cursor + scroll
-    if (heroVisible && depthLayers.length) {
-      curX += (pointerX - curX) * 0.08;
-      curY += (pointerY - curY) * 0.08;
-      const scroll = Math.min(window.scrollY, vh);
-      depthLayers.forEach((layer) => {
-        const d = parseFloat(layer.dataset.depth) || 0;
-        const x = -curX * d * 26;
-        const y = -curY * d * 20 - scroll * d * 0.09;
-        layer.style.translate = `${x.toFixed(2)}px ${y.toFixed(2)}px`;
-      });
-      // Sigue animando mientras el suavizado no haya convergido
-      if (Math.abs(pointerX - curX) > 0.001 || Math.abs(pointerY - curY) > 0.001) requestTick();
-    }
+    if (!heroVisible || !depthLayers.length) return;
+    curX += (pointerX - curX) * 0.12;
+    curY += (pointerY - curY) * 0.12;
+    depthLayers.forEach((layer) => {
+      const d = parseFloat(layer.dataset.depth) || 0;
+      layer.style.translate = `${(-curX * d * 26).toFixed(1)}px ${(-curY * d * 20).toFixed(1)}px`;
+    });
+    // Sigue animando solo mientras el suavizado no haya llegado a su destino
+    if (Math.abs(pointerX - curX) > 0.004 || Math.abs(pointerY - curY) > 0.004) requestTick();
   };
 
   const requestTick = () => {
@@ -195,20 +199,28 @@
     if (stage) {
       new IntersectionObserver(([entry]) => { heroVisible = entry.isIntersecting; }).observe(stage);
     }
-    if (finePointer.matches && stage) {
-      window.addEventListener('pointermove', (e) => {
-        if (!heroVisible) return;
+    const heroSection = stage && stage.closest('.hero');
+    if (finePointer.matches && heroSection) {
+      heroSection.addEventListener('pointermove', (e) => {
         pointerX = e.clientX / window.innerWidth - 0.5;
         pointerY = e.clientY / window.innerHeight - 0.5;
         requestTick();
       }, { passive: true });
+      heroSection.addEventListener('pointerleave', () => {
+        pointerX = 0;
+        pointerY = 0;
+        requestTick();
+      });
     }
-    requestTick();
   }
 
+  let scrollFrame = 0;
   window.addEventListener('scroll', () => {
-    onScrollState();
-    if (enableParallax() && heroVisible) requestTick();
+    if (scrollFrame) return;
+    scrollFrame = requestAnimationFrame(() => {
+      scrollFrame = 0;
+      onScrollState();
+    });
   }, { passive: true });
 
   /* Pausa las animaciones de las secciones que no están en pantalla -------- */
